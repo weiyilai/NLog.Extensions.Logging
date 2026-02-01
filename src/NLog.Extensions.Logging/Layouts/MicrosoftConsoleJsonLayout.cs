@@ -110,6 +110,7 @@ namespace NLog.Extensions.Logging
             if (stateJsonLayout != null)
             {
                 stateJsonLayout.MaxRecursionLimit = MaxRecursionLimit;
+                stateJsonLayout.DottedRecursion = DottedRecursion;
                 stateJsonLayout.ExcludeEmptyProperties = ExcludeEmptyProperties;
                 stateJsonLayout.SuppressSpaces = SuppressSpaces && !IndentJson;
                 if (ExcludeProperties?.Count > 0)
