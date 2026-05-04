@@ -2,6 +2,12 @@
 
 Date format: (year/month/day)
 
+### Version 6.1.3 (2026/05/04)
+- [#838](https://github.com/NLog/NLog.Extensions.Logging/pull/838) NLogLoggerFactory DisposeAsync with ConfigureAwait(false) (@11v1)
+- [#834](https://github.com/NLog/NLog.Extensions.Logging/pull/834) + [#835](https://github.com/NLog/NLog.Extensions.Logging/pull/835) MicrosoftConsoleJsonLayout - Added IncludeActivityIds to output TraceId + SpanId + ParentId (@snakefoot)
+- [#837](https://github.com/NLog/NLog.Extensions.Logging/pull/837) MicrosoftConsoleJsonLayout - Keep encoded newlines for Exception (@snakefoot)
+- [#843](https://github.com/NLog/NLog.Extensions.Logging/pull/843) Updated to NLog v6.1.3 (@snakefoot)
+
 ### Version 6.1.2 (2026/03/01)
 - [#831](https://github.com/NLog/NLog.Extensions.Logging/pull/831) MicrosoftConsoleJsonLayout - Forward DottedRecursion to State-JsonLayout (@snakefoot)
 - [#832](https://github.com/NLog/NLog.Extensions.Logging/pull/832) Updated to NLog v6.1.1 (@snakefoot)

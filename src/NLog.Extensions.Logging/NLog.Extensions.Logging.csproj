@@ -18,8 +18,10 @@ For ASP.NET Core, check: https://www.nuget.org/packages/NLog.Web.AspNetCore
     <PackageReleaseNotes>
 ChangeLog:
 
-- [#831] MicrosoftConsoleJsonLayout - Forward MaxRecursionLimit to State-JsonLayout (@snakefoot)
-- [#832] Updated to NLog v6.1.1 (@snakefoot)
+- [#838] NLogLoggerFactory DisposeAsync with ConfigureAwait(false) (@11v1)
+- [#834] MicrosoftConsoleJsonLayout - Added IncludeActivityIds to output TraceId + SpanId + ParentId (@snakefoot)
+- [#837] MicrosoftConsoleJsonLayout - Keep encoded newlines for Exception (@snakefoot)
+- [#843] Updated to NLog v6.1.3 (@snakefoot)
 
 Full changelog: https://github.com/NLog/NLog.Extensions.Logging/blob/master/CHANGELOG.MD
 
@@ -74,7 +76,7 @@ List of major changes in NLog 6.0: https://nlog-project.org/2025/04/29/nlog-6-0-
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="NLog" Version="6.1.1" />
+    <PackageReference Include="NLog" Version="6.1.3" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
