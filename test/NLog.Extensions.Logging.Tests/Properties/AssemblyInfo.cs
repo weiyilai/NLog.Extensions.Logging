@@ -10,3 +10,6 @@
 [assembly: ComVisible(false)]
 
 [assembly: Xunit.CollectionBehavior(DisableTestParallelization = true)]
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1873:Avoid potentially expensive logging", Justification = "Unit Test has no performance concerns")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2253:Named placeholders should not be numeric values", Justification = "Unit Test has no performance concerns")]

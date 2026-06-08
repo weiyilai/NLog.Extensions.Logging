@@ -93,7 +93,7 @@
                 {
                     Console.WriteLine("Type '{0}' is not used.", kvp.Key);
                     unusedTypes.Add(kvp.Key);
-                    sb.Append(kvp.Key.FullName).Append("\n");
+                    sb.Append(kvp.Key.FullName).Append('\n');
                 }
             }
 
@@ -149,7 +149,7 @@
                 if (appDomainFixedOutputAttribute != null)
                 {
                     var threadAgnosticAttribute = type.GetCustomAttribute<ThreadAgnosticAttribute>();
-                    Assert.True(!(threadAgnosticAttribute is null), $"{type.ToString()} is missing [ThreadAgnostic] attribute");
+                    Assert.False(threadAgnosticAttribute is null, $"{type.ToString()} is missing [ThreadAgnostic] attribute");
                 }
             }
         }
@@ -205,7 +205,7 @@
             {
                 if (type.IsSubclassOf(typeof(LayoutRenderer)))
                 {
-                    var layoutRendererAttributes = type.GetCustomAttributes<LayoutRendererAttribute>()?.ToArray() ?? new LayoutRendererAttribute[0];
+                    var layoutRendererAttributes = type.GetCustomAttributes<LayoutRendererAttribute>().ToArray();
                     if (layoutRendererAttributes.Length == 0)
                     {
                         Assert.True(type.IsAbstract, $"{type} without LayoutRendererAttribute must be abstract");
@@ -216,7 +216,7 @@
 
                         if (!oldFaultyClassNames.Contains(type.Name))
                         {
-                            var typeAlias = layoutRendererAttributes.First().Name.Replace("-", "");
+                            var typeAlias = layoutRendererAttributes[0].Name.Replace("-", "");
                             Assert.Equal(typeAlias + "LayoutRenderer", type.Name, StringComparer.OrdinalIgnoreCase);
                         }
                     }

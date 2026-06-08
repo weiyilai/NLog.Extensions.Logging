@@ -52,9 +52,9 @@ namespace NLog.Extensions.Logging.Tests
 }";
             var logConfig = CreateNLogLoggingConfigurationWithNLogSection(appSettings);
 
-            Assert.False(logConfig.LoggingRules.Any());
-            Assert.False(logConfig.AllTargets.Any());
-            Assert.False(logConfig.Variables.Any());
+            Assert.Empty(logConfig.LoggingRules);
+            Assert.Empty(logConfig.AllTargets);
+            Assert.Empty(logConfig.Variables);
         }
 
         [Fact]
